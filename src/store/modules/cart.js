@@ -1,5 +1,5 @@
 import shop from '../../api/shop'
-import * as types from '../mutation'
+import * as types from '../mutations'
 
 // initial state
 // shape: [{ id, quantity }]
