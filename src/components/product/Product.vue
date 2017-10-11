@@ -1,28 +1,20 @@
 <template>
-  <ul>
-    <li v-for="p in products" :key="p.id">
-      {{ p.title }} - {{ p.price }}
-      <br>
-      <button
-        :disabled="!p.inventory"
-        @click="addToCart(p)">
-        Add to cart
-      </button>
-    </li>
-  </ul>
+    <div>
+        <cart></cart>
+        <product-list></product-list>
+    </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import ProductList from './product-list/ProductList.vue'
+import Cart from './cart/Cart.vue'
+
 export default {
-  computed: mapGetters({
-    products: 'allProducts'
-  }),
-  methods: mapActions([
-    'addToCart'
-  ]),
-  created () {
-    this.$store.dispatch('getAllProducts')
-  }
+    name: 'product',
+    components: { ProductList, Cart }
 }
 </script>
+
+<style>
+
+</style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/hello/Hello'
-import Pro from '@/components/product/Pro'
+import Product from '@/components/product/Product'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/product',
       name: 'Product',
-      component: Pro
+      component: Product
     }
   ]
 })
